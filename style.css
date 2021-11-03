@@ -4,9 +4,15 @@
     box-sizing: border-box;
 }
 
+h1,
+#feedback {
+    text-align: center;
+    margin-top: 50px;
+}
+
 #container {
     width: 500px;
-    margin: 150px auto;
+    margin: 50px auto;
     border: 5px solid #000;
 }
 
@@ -25,6 +31,6 @@
     background-color: #00e164;
 }
 
-.bomb {
-    background-color: red;
+.bombs {
+    background-color: #f71467;
 }

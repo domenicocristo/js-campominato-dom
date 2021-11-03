@@ -31,18 +31,25 @@ if (difficulty == 'alto') {
 
 
 const grill = document.getElementById("container");
+const feedback = document.getElementById("feedback");
 
-for (let i = 0; i < levels; i++) {
+for (let i = 1; i <= levels; i++) {
     let newElement = generaElemento("div", "square");
+    newElement.id = i;
 
     newElement.addEventListener("click",
         function() {
-            newElement.classList.add("clicked-active");
+            this.classList.add("clicked-active");
+            const id = parseInt(this.id);
+            if (bombs.includes(id)) {
+                feedback.innerHTML = `HAI PERSO :(`;
+                this.classList.add("bombs");
+            }
         }
     );
 
     grill.appendChild(newElement);
-    newElement.append(i+1); 
+    newElement.append(i); 
 }
 
 const bombs = [];
@@ -52,7 +59,7 @@ while (bombs.length < 16) {
     const min = 1;
 
     const number = Math.floor(Math.random()*(max-min)+min);
-    if (bombs === numberslist) {
+    if (!bombs.includes(number)) {
         bombs.push(number);
     }
 }
