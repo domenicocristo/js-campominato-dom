@@ -45,6 +45,13 @@ for (let i = 0; i < levels; i++) {
     newElement.append(i+1);
 
     const numbersList = [i+1];
-    let numbersBomb = [];
-    console.log(numbersList);
+
+    const num = Math.floor(Math.random() * 16);
+    let numbersBomb = [num];
+    console.log(numbersBomb)
+
+    if (numbersBomb === numbersList) {
+        
+    }
+    
 }
