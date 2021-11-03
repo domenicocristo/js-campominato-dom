@@ -42,24 +42,10 @@ for (let i = 0; i < levels; i++) {
     );
 
     grill.appendChild(newElement);
-    // newElement.append(i+1);
+    newElement.append(i+1);
+
+    const numbersList = [i];
+    let numbersBomb = [];
+
+    console.log(numbersList)
 }
-
-const numberList = [];
-
-while (numberList.length < levels) {
-    const num = Math.floor(Math.random() * levels) + 1;
-    let duplicateNum = false;
-
-    for (i = 0; i < numberList.length; i++) {
-        if (num === numberList[i]) {
-            duplicateNum = true;
-        }
-    }
-
-    if (duplicateNum == false) {
-        numberList.push(num);
-    }
-}
-
-newElement.append(num);
