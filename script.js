@@ -44,8 +44,7 @@ for (let i = 0; i < levels; i++) {
     grill.appendChild(newElement);
     newElement.append(i+1);
 
-    const numbersList = [i];
+    const numbersList = [i+1];
     let numbersBomb = [];
-
-    console.log(numbersList)
+    console.log(numbersList);
 }
