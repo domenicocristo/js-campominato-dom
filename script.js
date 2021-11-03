@@ -32,6 +32,7 @@ if (difficulty == 'alto') {
 
 const grill = document.getElementById("container");
 const feedback = document.getElementById("feedback");
+const emoji = document.getElementById("emoji");
 
 for (let i = 1; i <= levels; i++) {
     let newElement = generaElemento("div", "square");
@@ -42,7 +43,8 @@ for (let i = 1; i <= levels; i++) {
             this.classList.add("clicked-active");
             const id = parseInt(this.id);
             if (bombs.includes(id)) {
-                feedback.innerHTML = `HAI PERSO :(`;
+                feedback.innerHTML = `---> HAI PERSO <---`;
+                emoji.innerHTML = `&#x1F614`;
                 this.classList.add("bombs");
             }
         }
