@@ -42,16 +42,17 @@ for (let i = 0; i < levels; i++) {
     );
 
     grill.appendChild(newElement);
-    newElement.append(i+1);
+    newElement.append(i+1); 
+}
 
-    const numbersList = [i+1];
+const bombs = [];
 
-    const num = Math.floor(Math.random() * 16);
-    let numbersBomb = [num];
-    console.log(numbersBomb)
+while (bombs.length < 16) {
+    const max = levels;
+    const min = 1;
 
-    if (numbersBomb === numbersList) {
-        
+    const number = Math.floor(Math.random()*(max-min)+min);
+    if (bombs === numberslist) {
+        bombs.push(number);
     }
-    
 }
