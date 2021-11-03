@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #001633;
-}
-
 #container {
     width: 500px;
     margin: 150px auto;
@@ -26,4 +22,8 @@ body {
 
 .clicked-active {
     background-color: #00e164;
+}
+
+.bomb {
+    background-color: red;
 }

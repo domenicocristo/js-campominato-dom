@@ -8,7 +8,6 @@
 // 6.2 dai un riscontro del punteggio all'utente
 
 // funzioni 
-
 function generaElemento(elementGen, classPlus) {
     let node = document.createElement(elementGen);
     node.classList.add(classPlus);
@@ -43,5 +42,24 @@ for (let i = 0; i < levels; i++) {
     );
 
     grill.appendChild(newElement);
-    newElement.append(i+1);
+    // newElement.append(i+1);
 }
+
+const numberList = [];
+
+while (numberList.length < levels) {
+    const num = Math.floor(Math.random() * levels) + 1;
+    let duplicateNum = false;
+
+    for (i = 0; i < numberList.length; i++) {
+        if (num === numberList[i]) {
+            duplicateNum = true;
+        }
+    }
+
+    if (duplicateNum == false) {
+        numberList.push(num);
+    }
+}
+
+newElement.append(num);
