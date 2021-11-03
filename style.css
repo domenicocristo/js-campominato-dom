@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #001633;
+}
+
+#container {
+    width: 500px;
+    margin: 150px auto;
+}
+
+.square {
+    height: 50px;
+    width: 10%;
+    display: inline-block;
+    border: 2px solid #fff;
+    background-color: #001633;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.clicked-active {
+    background-color: #00e164;
+}
